@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Patient Portal</title>
+    <link rel="stylesheet" href="signinup.css">
+    <style>
+        /* General Page Centering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents padding from breaking your layout widths */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #92cbf0; /* Very light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* The Box Outline Design */
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    
+    /* The Blue Box Outline */
+    border: 2px solid #007bff; 
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
+    
+    box-sizing: border-box;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.medical-icon {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.auth-header h2 {
+    color: #007bff;
+    margin: 0;
+    font-size: 24px;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Form Styles */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button with Hover & Click Effect */
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.primary-btn:active {
+    transform: scale(0.98);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Position the link independently in the top-left corner */
+.back-link {
+    position: absolute;
+    top: 25px;            /* Distance from the top edge */
+    left: 25px;           /* Distance from the left edge */
+    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #007bff;       /* Medical blue color */
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 10;          /* Keeps it above other elements */
+}
+
+/* Styling the arrow symbol */
+.arrow {
+    font-size: 20px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects for responsiveness */
+.back-link:hover {
+    color: #0056b3;       /* Darkens on hover */
+}
+
+/* Makes the arrow "nudge" left when hovered */
+.back-link:hover .arrow {
+    transform: translateX(-5px);
+}
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">
+  <span class="arrow">&larr;</span> Back to Home
+</a>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="medical-icon">✚</div>
+                <h2>New Patient Registration</h2>
+                <p>Join our healthcare network today</p>
+            </div>
+
+            <form>
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="name@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Create Password</label>
+                    <input type="password" placeholder="At least 8 characters" required>
+                </div>
+
+                <button type="submit" class="primary-btn">Create Account</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="signin.html">Sign In here</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>  
